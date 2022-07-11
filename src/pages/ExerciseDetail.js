@@ -31,14 +31,14 @@ const ExerciseDetail = () => {
       
       const equipmentExercisesData = await fetchData(`${exerciseDbUrl}/exercises/equipment/${exerciseDetailData.equipment}`, exerciseOptions)
       setEquipmentExercises(equipmentExercisesData)
-
+      
     }
 
     fetchExercisesData()
   }, [id])
 
   if (!exerciseDetail) return <div>No Data</div>;
-  
+
   return (
     <Box>
       <Detail exerciseDetail={exerciseDetail} />

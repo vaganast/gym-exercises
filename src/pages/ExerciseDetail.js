@@ -37,6 +37,8 @@ const ExerciseDetail = () => {
     fetchExercisesData()
   }, [id])
 
+  if (!exerciseDetail) return <div>No Data</div>;
+  
   return (
     <Box>
       <Detail exerciseDetail={exerciseDetail} />
